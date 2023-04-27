@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html style="background-color: rgb(110, 218, 137);">
+<head>
+	<title>Education Form</title>
+	<link rel = "icon" href ="https://www.umeacademy.com/wp-content/uploads/2021/03/AMRITA-VISHWA-VIDYAPEETHAM-college-logo.jpg" 
+        type = "image/x-icon">
+</head>
+
+<body style="font-size: 20px;">
+	<center><img src="https://upload.wikimedia.org/wikipedia/en/f/f8/Amrita-vishwa-vidyapeetham-color-logo.png"></img>
+		<form action="Forms.html" method="GET" style="background-color: rgb(98, 134, 235); width: 35%; border-radius: 10px; padding-left: 30px;">
+			<label for="name" style="padding-right: 300px;"><b>Name</b></label>
+			<br>
+			<input type="text" placeholder="Enter Name" name="name" id="name" required>
+			<br>
+			<label for="email" style="padding-right: 295px;"><b>Email</b></label>
+			<br>
+			<input type="text" placeholder="Enter Email" name="email" id="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+			title="Not a valid E-mail" required>
+			<br>
+			<label for="psw" style="padding-right: 260px;"><b>Password</b></label>
+			<br>
+			<input type="password" minlength="8" placeholder="Enter Password" name="psw" id="psw" required>
+			<br>
+			<label for="pswc" style="padding-right: 180px;"><b>Confirm Password</b></label>
+			<br>
+			<input type="password" minlength="8" placeholder="Repeat Password" name="pswc" id="pswc" required>
+			<br>
+			<button type="submit" name="submit" value="submit">Sign up</button>
+		</form>
+		<style>
+			input[type=text], input[type=password] {
+				width: 50%;
+				padding: 15px;
+				margin: 15px;
+				display: inline-block;
+				border: none;
+				background: #f1f1f1;
+				border-radius: 10px;
+			}
+  
+			input[type=text]:focus, input[type=password]:focus {
+				background-color: #ddd;
+				outline: none;
+			}
+			button{
+				background-color: #df38d1;
+				border: none;
+				color: white;
+				padding: 15px 32px;
+				text-align: center;
+				text-decoration: none;
+				display: inline-block;
+				font-size: 16px;
+				border-radius: 15px;
+				text-align: center;
+			}
+			html { 
+                background: url(https://www.w3schools.com/howto/img_girl.jpg) no-repeat center center fixed; 
+                -webkit-background-size: cover;
+                -moz-background-size: cover;
+                -o-background-size: cover;
+                background-size: cover;
+            }
+            table{
+                background-color: rgb(110, 218, 137);;
+                opacity: 0.90;
+                border-radius: 10px;
+            }
+		</style>
+	</center>
+</body>
+
+</html>

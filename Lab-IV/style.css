@@ -1,0 +1,88 @@
+html{
+	height: 100%;
+  overflow-x: hidden;
+}
+
+body{
+	height: 100%;
+	margin: 0px;
+	font-family: 'Roboto', sans-serif;
+}
+
+.header{
+  font-size: 62px;
+  margin: auto;
+  padding-bottom: 50px;
+  padding-top: 20px;
+}
+
+strong{
+	color: chocolate;
+  font-weight: bold;
+  background: url('https://t4.ftcdn.net/jpg/03/15/02/55/360_F_315025553_Vt0vN1KDcBzlruCijiRy3AZgnQIc0PmM.jpg');
+  background-size: cover;
+	background-clip: text;
+  -webkit-background-clip: text;
+	color: transparent;
+}
+html { 
+    background: url(https://img.freepik.com/free-vector/engraved-coffee-shop-related-objects-background-kraft-paper-texture_281653-1168.jpg?size=626&ext=jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+tr:hover{
+	cursor: pointer;
+	background: rgb(0, 0, 0);
+	color: beige;
+    width: auto;
+}
+table{
+    align-items: center;
+    width: 650px;
+    background-color: snow;
+    opacity: 0.7;
+    border-radius: 10px;
+    border-top:5px solid black;
+    border-right:5px solid black;
+    border-left: 5px solid black;
+    border-bottom: 5px solid black;
+}
+tr{
+    font-size: 20px;
+}
+#title{
+    width: auto;
+    height: auto;
+    background-color: white;
+    animation-name: example;
+    animation-duration: 5s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    border-radius: 10px;
+}
+table{
+  background-color: white;
+  position: relative;
+  animation-name: table;
+  animation-duration: 5s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  border-radius: 10px;
+}
+@keyframes example {
+  0%   {background-color:rgb(162, 241, 109);}
+  50%  {background-color: rgb(226, 137, 137);}
+  100%  {background-color:rgb(238, 238, 108);}   
+}
+.main{
+  padding-bottom: 50px;
+}
+@keyframes table {
+  0%   {background-color:rgb(162, 241, 109); left:0px; right:0px;}
+  50%  {background-color:rgb(238, 238, 108); left:50px; right:0px;}
+  100%  {background-color:rgb(226, 137, 137); left:0px; right:100px;}
+}

@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Sign Up</title>
+	<link rel = "icon" href ="https://amrita.edu/wp-content/uploads/2019/05/amrita-new-favicon.ico" 
+        type = "image/x-icon">
+</head>
+
+<body style="font-size: 20px;" onload="init();">
+	<center><br><br><img src="1.png" height="168" width="613"></img><br><br></center>
+	<form action="#" name="form">
+        <center>
+        <table>
+            <tr >
+                <td></td>
+                <td>
+                    <center><div id="C1"><b style="font-size: 30px;"><br>Account Creation</b></div></center>
+                </td>
+                <td></td>
+            </tr>
+            <tr>
+                <td><br></td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="fname"><b>First Name</b></label>
+                    <br>
+                    <input type="text" placeholder="Enter First Name" name="fname" id="fname" required pattern="[A-Za-z]{3,}">
+                </td>
+                <td>
+                    <label for="lname"><b>Last Name</b></label>
+                    <br>
+                    <input type="text" placeholder="Enter Last Name" name="lname" id="lname" required pattern="[A-Za-z]{2,}">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="name"><b>Father's Name</b></label>
+                    <br>
+                    <input type="text" placeholder="Enter Father's Name" name="father" id="father" required pattern="[A-Za-z]{3,}">
+                </td>
+                <td>
+                    <label for="phno"><b>Phone Number</b></label>
+                    <br>
+                    <input type="tel" placeholder="Enter Phone Number" name="phno" id="phno" required pattern="[0-9]{10}" maxlength="10" title="Not a valid Phone Number">
+                </td>
+                <td>
+                    <label for="dob"><b>Date of Brith</b></label>
+                    <br>
+                    <input type="date" name="dob" id="dob" style="width: 45%;" required>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="address"><b>Address</b></label>
+                    <br>
+                    <input type="text" placeholder="Enter Address" name="address" id="address" style="width: 200%;" required pattern="[A-Za-z0-9]{5,}}" rows="5">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="state"><b>State</b></label>
+                    <br>
+                    <input type="text" placeholder="Enter State" name="state" id="state" required pattern="[A-Za-z]{5,}">
+                </td>
+                <td>
+                    <label for="country"><b>Country</b></label>
+                    <br>
+                    <select id="country" name="country" style="width: 85%" required>
+                        <option value="">Select your Country</option>
+                    </select>
+                </td>
+                <td>
+                    <label for="pincode"><b>PinCode</b></label>
+                    <br>
+                    <input type="text" placeholder="Enter PinCode" name="pincode" id="pincode" required pattern="[0-9]{6}" maxlength="6" style="width: 45%;" required>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <center>
+                        <input type="checkbox" id="agree" name="agree">
+                        <label for="agree"><b> Agree to Terms and Conditions </b></label>
+                        <br><br>
+                    </center>
+                </td>
+            </tr>
+        </table>
+        <br>
+            <button type="submit" name="submit" value="submit" onClick="return ValidateForm(this.form);">Submit</button>
+            <button type="reset">Reset</button>
+        <br><br>
+        </center>
+	</form>
+	<style>
+        input[type=radio]{
+            margin: 10px;
+        }
+        input[type=range]{
+            margin: 15px;
+            width: 65%;
+        }
+		input[type=text], input[type=password], input[type=tel], input[type=date],input[type=email],option,select {
+			width: 50%;
+			padding: 15px;
+			margin: 15px;
+			display: inline-block;
+			border: none;
+			background: #f1f1f1;
+			border-radius: 10px;
+		}
+
+		input[type=text]:focus, input[type=password]:focus, input[type=tel]:focus, input[type=date]:focus, input[type=email]:focus {
+			background-color: #ddd;
+			outline: none;
+		}
+		button{
+			background-color: #df38d1;
+			border: none;
+			color: white;
+			padding: 15px 32px;
+			text-align: center;
+			text-decoration: none;
+			display: inline-block;
+			font-size: 16px;
+			border-radius: 15px;
+			text-align: center;
+		}
+        td{
+            width: 300px;
+        }
+        html { 
+            background: url(https://www.w3schools.com/howto/img_girl.jpg) no-repeat center center fixed; 
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+        }
+        table{
+            background-color: rgb(110, 218, 137);;
+            opacity: 0.90;
+            border-radius: 10px;
+        }
+	</style>
+    <script>
+        var phno = document.getElementById("phno");
+        phno.addEventListener('input', () => {
+        phno.setCustomValidity('');
+        phno.checkValidity();
+        });
+        phno.addEventListener('invalid', () => {
+        if(phno.value === '') {
+            phno.setCustomValidity('Enter Phone Number');
+            alert("Please Enter Phone Number");
+        } else {
+            phno.setCustomValidity('Enter Phone Number in this format: 1234567890');
+        }
+        });
+        var father = document.getElementById("father");
+        father.addEventListener('input', () => {
+        father.setCustomValidity('');
+        father.checkValidity();
+        });
+        father.addEventListener('invalid', () => {
+        if(father.value === '') {
+            father.setCustomValidity("Enter Father's Name");
+            alert("Please Enter Father's Name");
+        }
+        });
+        
+        var address = document.getElementById("address");
+        address.addEventListener('input', () => {
+        address.setCustomValidity('');
+        address.checkValidity();
+        });
+        address.addEventListener('invalid', () => {
+        if(address.value === '') {
+            address.setCustomValidity('Enter Address');
+            alert("Please Enter Address");
+        } else {
+            address.setCustomValidity('Enter Address with Door No.');
+        }
+        });
+        var fname = document.getElementById("fname");
+        fname.addEventListener('input', () => {
+        fname.setCustomValidity('');
+        fname.checkValidity();
+        });
+        fname.addEventListener('invalid', () => {
+        if(fname.value === '') {
+            fname.setCustomValidity('Enter First Name');
+            alert("Please Enter First Name");
+        }
+        });
+        var lname = document.getElementById("lname");
+        lname.addEventListener('input', () => {
+        lname.setCustomValidity('');
+        lname.checkValidity();
+        });
+        lname.addEventListener('invalid', () => {
+        if(lname.value === '') {
+            lname.setCustomValidity('Enter Last Name');
+            alert("Please Enter Last Name");
+        } 
+        });
+        var state = document.getElementById("state");
+        state.addEventListener('input', () => {
+        state.setCustomValidity('');
+        state.checkValidity();
+        });
+        state.addEventListener('invalid', () => {
+        if(state.value === '') {
+            state.setCustomValidity('Enter State');
+            alert("Please Enter State");
+        }else {
+            state.setCustomValidity('Enter State in Alphabets');
+        }
+        });
+        var country = document.querySelector("#country");
+
+        function init() {
+        var countries = ['Afghanistan', 'Aland Islands', 'Albania', 'Algeria', 'American Samoa', 'Andorra', 'Angola', 'Anguilla', 'Antarctica', 'Antigua and Barbuda', 'Argentina', 'Armenia', 'Aruba', 'Australia', 'Austria', 'Azerbaijan', 'Bahamas', 'Bahrain', 'Bangladesh', 'Barbados', 'Belarus', 'Belgium', 'Belize', 'Benin', 'Bermuda', 'Bhutan', 'Bolivia, Plurinational State of', 'Bonaire, Sint Eustatius and Saba', 'Bosnia and Herzegovina', 'Botswana', 'Bouvet Island', 'Brazil', 'British Indian Ocean Territory', 'Brunei Darussalam', 'Bulgaria', 'Burkina Faso', 'Burundi', 'Cambodia', 'Cameroon', 'Canada', 'Cape Verde', 'Cayman Islands', 'Central African Republic', 'Chad', 'Chile', 'China', 'Christmas Island', 'Cocos (Keeling) Islands', 'Colombia', 'Comoros', 'Congo', 'Congo, The Democratic Republic of the', 'Cook Islands', 'Costa Rica', "Côte d'Ivoire", 'Croatia', 'Cuba', 'Curaçao', 'Cyprus', 'Czech Republic', 'Denmark', 'Djibouti', 'Dominica', 'Dominican Republic', 'Ecuador', 'Egypt', 'El Salvador', 'Equatorial Guinea', 'Eritrea', 'Estonia', 'Ethiopia', 'Falkland Islands (Malvinas)', 'Faroe Islands', 'Fiji', 'Finland', 'France', 'French Guiana', 'French Polynesia', 'French Southern Territories', 'Gabon', 'Gambia', 'Georgia', 'Germany', 'Ghana', 'Gibraltar', 'Greece', 'Greenland', 'Grenada', 'Guadeloupe', 'Guam', 'Guatemala', 'Guernsey', 'Guinea', 'Guinea-Bissau', 'Guyana', 'Haiti', 'Heard Island and McDonald Islands', 'Holy See (Vatican City State)', 'Honduras', 'Hong Kong', 'Hungary', 'Iceland', 'India', 'Indonesia', 'Iran, Islamic Republic of', 'Iraq', 'Ireland', 'Isle of Man', 'Israel', 'Italy', 'Jamaica', 'Japan', 'Jersey', 'Jordan', 'Kazakhstan', 'Kenya', 'Kiribati', "Korea, Democratic People's Republic of", 'Korea, Republic of', 'Kuwait', 'Kyrgyzstan', "Lao People's Democratic Republic", 'Latvia', 'Lebanon', 'Lesotho', 'Liberia', 'Libya', 'Liechtenstein', 'Lithuania', 'Luxembourg', 'Macao', 'Macedonia, Republic of', 'Madagascar', 'Malawi', 'Malaysia', 'Maldives', 'Mali', 'Malta', 'Marshall Islands', 'Martinique', 'Mauritania', 'Mauritius', 'Mayotte', 'Mexico', 'Micronesia, Federated States of', 'Moldova, Republic of', 'Monaco', 'Mongolia', 'Montenegro', 'Montserrat', 'Morocco', 'Mozambique', 'Myanmar', 'Namibia', 'Nauru', 'Nepal', 'Netherlands', 'New Caledonia', 'New Zealand', 'Nicaragua', 'Niger', 'Nigeria', 'Niue', 'Norfolk Island', 'Northern Mariana Islands', 'Norway', 'Oman', 'Pakistan', 'Palau', 'Palestinian Territory, Occupied', 'Panama', 'Papua New Guinea', 'Paraguay', 'Peru', 'Philippines', 'Pitcairn', 'Poland', 'Portugal', 'Puerto Rico', 'Qatar', 'Réunion', 'Romania', 'Russian Federation', 'Rwanda', 'Saint Barthélemy', 'Saint Helena, Ascension and Tristan da Cunha', 'Saint Kitts and Nevis', 'Saint Lucia', 'Saint Martin (French part)', 'Saint Pierre and Miquelon', 'Saint Vincent and the Grenadines', 'Samoa', 'San Marino', 'Sao Tome and Principe', 'Saudi Arabia', 'Senegal', 'Serbia', 'Seychelles', 'Sierra Leone', 'Singapore', 'Sint Maarten (Dutch part)', 'Slovakia', 'Slovenia', 'Solomon Islands', 'Somalia', 'South Africa', 'South Georgia and the South Sandwich Islands', 'Spain', 'Sri Lanka', 'Sudan', 'Suriname', 'South Sudan', 'Svalbard and Jan Mayen', 'Swaziland', 'Sweden', 'Switzerland', 'Syrian Arab Republic', 'Taiwan, Province of China', 'Tajikistan', 'Tanzania, United Republic of', 'Thailand', 'Timor-Leste', 'Togo', 'Tokelau', 'Tonga', 'Trinidad and Tobago', 'Tunisia', 'Turkey', 'Turkmenistan', 'Turks and Caicos Islands', 'Tuvalu', 'Uganda', 'Ukraine', 'United Arab Emirates', 'United Kingdom', 'United States', 'United States Minor Outlying Islands', 'Uruguay', 'Uzbekistan', 'Vanuatu', 'Venezuela, Bolivarian Republic of', 'Viet Nam', 'Virgin Islands, British', 'Virgin Islands, U.S.', 'Wallis and Futuna', 'Yemen', 'Zambia', 'Zimbabwe'];
+        for (var i = 0; i < countries.length; i++) {
+            var opt = countries[i];
+            var el = document.createElement("option");
+            el.innerHTML = opt;
+            el.value = opt;
+            country.appendChild(el);
+        }}
+        country.addEventListener('invalid', () => {
+            if(country.value === '') {
+                alert('Please Select Country');
+            }
+            });
+        var pincode = document.getElementById("pincode");
+        pincode.addEventListener('input', () => {
+        pincode.setCustomValidity('');
+        pincode.checkValidity();
+        });
+        pincode.addEventListener('invalid', () => {
+        if(pincode.value === '') {
+            pincode.setCustomValidity('Enter PinCode');
+            alert("Please Enter PinCode");
+        } else {
+            pincode.setCustomValidity('Enter Pincode which contains 6 digits');
+        }
+        });
+        var dob = document.getElementById("dob");
+        dob.addEventListener('input', () => {
+        dob.setCustomValidity('');
+        dob.checkValidity();
+        });
+        dob.addEventListener('invalid', () => {
+        if(dob.value === '') {
+            dob.setCustomValidity('Select Date of Birth');
+            alert("Please Select Date of Birth");
+        }
+        });
+        function ValidateForm(form){
+            if ( ( form.agree.checked == false ) ){
+                alert ("Please Agree our Terms and Conditions" );
+                return false;
+            }
+            else{
+                alert("Thanks for Sign Up.\nPlease Log In to continue");
+                return true;
+            }
+        }
+    </script>
+</body>
+</html>

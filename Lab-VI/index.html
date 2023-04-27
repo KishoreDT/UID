@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <script type="text/javascript">
+
+            function display()
+            {
+                var name;
+                name=window.prompt("Enter the Country");
+                document.write(name + " Map is Displayed");
+            }
+
+            function showCoord(event)
+            {
+                var x = event.clientX;
+                var y = event.clientY;
+                var coord = "X Co-ordinate: " + x + ", Y Co-ordinate: " + y;
+                document.getElementById("eg").innerHTML = coord;
+            }
+
+            display();
+        </script>
+        <br>
+        <img src="https://www.nationsonline.org/maps/Political-World-Map-3360.jpg" width="1250" height="550" onmousemove="showCoord(event)" alt="Workplace" usemap="#workmap">
+        <p id="eg"></p>
+        <map name="workmap">
+            <area shape="rect" coords="34,44,270,350" alt="Computer" href="us.html">
+            <area shape="rect" coords="290,172,333,250" alt="Phone" href="cuba.html">
+            <area shape="circle" coords="337,300,44" alt="Coffee" href="peru.html">
+        </map>
+    </body>
+    <style>
+        p
+        {
+            font-size: 25px;
+        }
+        html
+        {
+            background-color: aquamarine;
+        }
+    </style>
+</html>

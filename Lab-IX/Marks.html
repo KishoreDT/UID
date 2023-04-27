@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Form</title>
+	<link rel = "icon" href ="https://amrita.edu/wp-content/uploads/2019/05/amrita-new-favicon.ico" 
+        type = "image/x-icon">
+</head>
+
+<body style="font-size: 20px;" onload="init();">
+	<center><img src="https://upload.wikimedia.org/wikipedia/en/f/f8/Amrita-vishwa-vidyapeetham-color-logo.png"></img></center>
+    <center>
+    <form>
+    <table>
+        <tr>
+            <td></td>
+            <td>
+                <center><div id="C1"><b style="font-size: 30px;"><br>Marks Checking</b></div></center>
+            </td>
+            <td></td>
+        </tr>
+        <tr>
+            <td><br></td>
+        </tr>
+        <tr>
+            <td>
+                <label for="name"><b>First Name</b></label>
+                <br>
+                <input type="text" placeholder="Enter First Name" name="fname" id="fname" required pattern="[A-Za-z]{3,}">
+            </td>
+            <td>
+                <label for="name"><b>Last Name</b></label>
+                <br>
+                <input type="text" placeholder="Enter Last Name" name="lname" id="lname" required pattern="[A-Za-z]{2,}">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="s1"><b>Subject-1 Name</b></label>
+                <br>
+                <input type="text" placeholder="Enter Subject-1 Name" name="s1" id="s1" pattern="[A-Za-z]{1,}" required>
+            </td>
+            <td>
+                <label for="m1"><b>Subject-1 Mark</b></label>
+                <br>
+                <input type="text" placeholder="Enter Subject-1 Mark" name="m1" id="m1" pattern="[0-9]{1,}" required>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="s2"><b>Subject-2 Name</b></label>
+                <br>
+                <input type="text" placeholder="Enter Subject-2 Name" name="s2" id="s2" pattern="[A-Za-z]{1,}" required>
+            </td>
+            <td>
+                <label for="m2"><b>Subject-2 Mark</b></label>
+                <br>
+                <input type="text" placeholder="Enter Subject-2 Mark" name="m2" id="m2" required pattern="[0-9]{1,}">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="s3"><b>Subject-3 Name</b></label>
+                <br>
+                <input type="text" placeholder="Enter Subject-3 Name" name="s3" id="s3" pattern="[A-Za-z]{1,}" required>
+            </td>
+            <td>
+                <label for="m3"><b>Subject-3 Mark</b></label>
+                <br>
+                <input type="text" placeholder="Enter Subject-3 Mark" name="m3" id="m3" pattern="[0-9]{1,}" required>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="s4"><b>Subject-4 Name</b></label>
+                <br>
+                <input type="text" placeholder="Enter Subject-4 Name" name="s4" id="s4" pattern="[A-Za-z]{1,}" required>
+            </td>
+            <td>
+                <label for="m4"><b>Subject-4 Mark</b></label>
+                <br>
+                <input type="text" placeholder="Enter Subject-4 Mark" name="m4" id="m4" required pattern="[0-9]{1,}">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="s5"><b>Subject-5 Name</b></label>
+                <br>
+                <input type="text" placeholder="Enter Subject-5 Name" name="s5" id="s5" pattern="[A-Za-z]{1,}" required>
+            </td>
+            <td>
+                <label for="m5"><b>Subject-5 Mark</b></label>
+                <br>
+                <input type="text" placeholder="Enter Subject-5 Mark" name="m5" id="m5" pattern="[0-9]{1,}" required>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="s6"><b>Subject-6 Name</b></label>
+                <br>
+                <input type="text" placeholder="Enter Subject-6 Name" name="s6" id="s6" pattern="[A-Za-z]{1,}" required>
+            </td>
+            <td>
+                <label for="m6"><b>Subject-6 Mark</b></label>
+                <br>
+                <input type="text" placeholder="Enter Subject-6 Mark" name="m6" id="m6" pattern="[0-9]{1,}" required>
+            </td>
+        </tr>
+    </table>
+    <br>
+        <button onClick="Result()">Submit</button>
+        <button type="reset">Reset</button>
+    <br><br>
+    <table style="background-color: rgb(94, 210, 245);">
+        <tr>
+            <td></td>
+            <td>
+                <center>
+                <label for="sn"><b>Student Name</b></label>
+                <br>
+                <input type="text" name="sn" id="sn">
+                </center>
+            </td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>
+                <label for="maxs"><b>Max Marks Obtained Subject Name</b></label>
+                <br>
+                <input type="text" name="maxs" id="maxs">
+            </td>
+            <td>
+                <label for="maxm"><b>Max Marks Obtained</b></label>
+                <br>
+                <input type="text" name="maxm" id="maxm">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="mins"><b>Min Marks Obtained Subject Name</b></label>
+                <br>
+                <input type="text" name="mins" id="mins">
+            </td>
+            <td>
+                <label for="minm"><b>Min Marks Obtained</b></label>
+                <br>
+                <input type="text" name="minm" id="minm">
+            </td>
+        </tr>
+    </table>
+    </form>
+    </center>
+	<style>
+        input[type=radio]{
+            margin: 10px;
+        }
+        input[type=range]{
+            margin: 15px;
+            width: 65%;
+        }
+		input[type=text], input[type=password], input[type=tel], input[type=date],input[type=email],option,select {
+			width: 50%;
+			padding: 15px;
+			margin: 15px;
+			display: inline-block;
+			border: none;
+			background: #f1f1f1;
+			border-radius: 10px;
+		}
+
+		input[type=text]:focus, input[type=password]:focus, input[type=tel]:focus, input[type=date]:focus, input[type=email]:focus {
+			background-color: #ddd;
+			outline: none;
+		}
+		button{
+			background-color: #df38d1;
+			border: none;
+			color: white;
+			padding: 15px 32px;
+			text-align: center;
+			text-decoration: none;
+			display: inline-block;
+			font-size: 16px;
+			border-radius: 15px;
+			text-align: center;
+		}
+        td{
+            width: 300px;
+        }
+        html { 
+            background: url(https://www.w3schools.com/howto/img_girl.jpg) no-repeat center center fixed; 
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+        }
+        table{
+            background-color: rgb(110, 218, 137);;
+            opacity: 0.90;
+            border-radius: 10px;
+        }
+	</style>
+    <script>
+        var fname = document.getElementById("fname");
+            fname.addEventListener('input', () => {
+            fname.setCustomValidity('');
+            fname.checkValidity();
+            });
+            fname.addEventListener('invalid', () => {
+            if(fname.value === '') {
+                fname.setCustomValidity('Enter First Name');
+                alert("Please Enter First Name");
+            }
+            });
+            var lname = document.getElementById("lname");
+            lname.addEventListener('input', () => {
+            lname.setCustomValidity('');
+            lname.checkValidity();
+            });
+            lname.addEventListener('invalid', () => {
+            if(lname.value === '') {
+                lname.setCustomValidity('Enter Last Name');
+                alert("Please Enter Last Name");
+            } 
+            });
+            var s1 = document.getElementById("s1");
+            s1.addEventListener('input', () => {
+            s1.setCustomValidity('');
+            s1.checkValidity();
+            });
+            s1.addEventListener('invalid', () => {
+            if(s1.value === '') {
+                s1.setCustomValidity('Enter Subject-1 Name');
+                alert("Please Enter Subject-1 Name");
+            } 
+            });
+            var s2 = document.getElementById("s2");
+            s2.addEventListener('input', () => {
+            s2.setCustomValidity('');
+            s2.checkValidity();
+            });
+            s2.addEventListener('invalid', () => {
+            if(s2.value === '') {
+                s2.setCustomValidity('Enter Subject-2 Name');
+                alert("Please Enter Subject-2 Name");
+            } 
+            });
+            var s3 = document.getElementById("s3");
+            s3.addEventListener('input', () => {
+            s3.setCustomValidity('');
+            s3.checkValidity();
+            });
+            s3.addEventListener('invalid', () => {
+            if(s3.value === '') {
+                s3.setCustomValidity('Enter Subject-3 Name');
+                alert("Please Enter Subject-3 Name");
+            } 
+            });
+            var s4 = document.getElementById("s4");
+            s4.addEventListener('input', () => {
+            s4.setCustomValidity('');
+            s4.checkValidity();
+            });
+            s4.addEventListener('invalid', () => {
+            if(s4.value === '') {
+                s4.setCustomValidity('Enter Subject-4 Name');
+                alert("Please Enter Subject-4 Name");
+            } 
+            });
+            var s5 = document.getElementById("s5");
+            s5.addEventListener('input', () => {
+            s5.setCustomValidity('');
+            s5.checkValidity();
+            });
+            s5.addEventListener('invalid', () => {
+            if(s5.value === '') {
+                s5.setCustomValidity('Enter Subject-5 Name');
+                alert("Please Enter Subject-5 Name");
+            } 
+            });
+            var s6 = document.getElementById("s6");
+            s6.addEventListener('input', () => {
+            s6.setCustomValidity('');
+            s6.checkValidity();
+            });
+            s6.addEventListener('invalid', () => {
+            if(s6.value === '') {
+                s6.setCustomValidity('Enter Subject-6 Name');
+                alert("Please Enter Subject-6 Name");
+            } 
+            });
+            var m1 = document.getElementById("m1");
+            m1.addEventListener('input', () => {
+            m1.setCustomValidity('');
+            m1.checkValidity();
+            });
+            m1.addEventListener('invalid', () => {
+            if(m1.value === '') {
+                m1.setCustomValidity('Enter Subject-1 Mark');
+                alert("Please Enter Subject-1 Mark");
+            } 
+            });
+            var m2 = document.getElementById("m2");
+            m2.addEventListener('input', () => {
+            m2.setCustomValidity('');
+            m2.checkValidity();
+            });
+            m2.addEventListener('invalid', () => {
+            if(m2.value === '') {
+                m2.setCustomValidity('Enter Subject-2 Mark');
+                alert("Please Enter Subject-2 Mark");
+            } 
+            });
+            var m3 = document.getElementById("m3");
+            m3.addEventListener('input', () => {
+            m3.setCustomValidity('');
+            m3.checkValidity();
+            });
+            m3.addEventListener('invalid', () => {
+            if(m3.value === '') {
+                m3.setCustomValidity('Enter Subject-3 Mark');
+                alert("Please Enter Subject-3 Mark");
+            } 
+            });
+            var m4 = document.getElementById("m4");
+            m4.addEventListener('input', () => {
+            m4.setCustomValidity('');
+            m4.checkValidity();
+            });
+            m4.addEventListener('invalid', () => {
+            if(m4.value === '') {
+                m4.setCustomValidity('Enter Subject-4 Mark');
+                alert("Please Enter Subject-4 Mark");
+            } 
+            });
+            var m5 = document.getElementById("m5");
+            m5.addEventListener('input', () => {
+            m5.setCustomValidity('');
+            m5.checkValidity();
+            });
+            m5.addEventListener('invalid', () => {
+            if(m5.value === '') {
+                m5.setCustomValidity('Enter Subject-5 Mark');
+                alert("Please Enter Subject-5 Mark");
+            } 
+            });
+            var m6 = document.getElementById("m6");
+            m6.addEventListener('input', () => {
+            m6.setCustomValidity('');
+            m6.checkValidity();
+            });
+            m6.addEventListener('invalid', () => {
+            if(m6.value === '') {
+                m6.setCustomValidity('Enter Subject-6 Mark');
+                alert("Please Enter Subject-6 Mark");
+            } 
+            });
+        function Result(){
+            var max;
+            var m1 = parseInt(document.getElementById("m1").value);
+            var m2 = parseInt(document.getElementById("m2").value);
+            var m3 = parseInt(document.getElementById("m3").value);
+            var m4 = parseInt(document.getElementById("m4").value);
+            var m5 = parseInt(document.getElementById("m5").value);
+            var m6 = parseInt(document.getElementById("m6").value);
+            var s1 = document.getElementById("s1").value;
+            var s2 = document.getElementById("s2").value;
+            var s3 = document.getElementById("s3").value;
+            var s4 = document.getElementById("s4").value;
+            var s5 = document.getElementById("s5").value;
+            var s6 = document.getElementById("s6").value;
+            var fname = document.getElementById("fname").value;
+            var lname = document.getElementById("lname").value;
+            var name = fname+" "+lname;
+            var arr = [m1,m2,m3,m4,m5,m6];
+            var min = Math.min(...arr),max = Math.max(...arr);
+            if (max==m1){
+                document.getElementById("maxs").value=s1;
+            }
+            else if(max==m2){
+                document.getElementById("maxs").value=s2;
+            }
+            else if(max==m3){
+                document.getElementById("maxs").value=s3;
+            }
+            else if(max==m4){
+                document.getElementById("maxs").value=s4;
+            }
+            else if(max==m5){
+                document.getElementById("maxs").value=s5;
+            }
+            else{
+                document.getElementById("maxs").value=s6;
+            }
+            if(min==m1){
+                document.getElementById("mins").value=s1;
+            }
+            else if(min==m2){
+                document.getElementById("mins").value=s2;
+            }
+            else if(min==m3){
+                document.getElementById("mins").value=s3;
+            }
+            else if(min==m4){
+                document.getElementById("mins").value=s4;
+            }
+            else if(min==m5){
+                document.getElementById("mins").value=s5;
+            }
+            else{
+                document.getElementById("mins").value=s6;
+            }
+            document.getElementById("maxm").value=max;
+            document.getElementById("minm").value=min;
+            document.getElementById("sn").value=name;
+        }
+    </script>
+</body>
+</html>

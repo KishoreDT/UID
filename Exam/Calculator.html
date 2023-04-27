@@ -1,0 +1,128 @@
+<html>
+<head>
+    <title>Calculator</title>
+</head>
+<body style="font-size: 20px;">
+	<br><br>
+	<br><br>
+    <br><br>
+    <br><br>
+    <br><br>
+    <br><br>
+    <center>
+		<table>
+			<td>
+                <center><div id="C1"><b style="font-size: 30px;">Calculator</b><br><br></div></center>
+            </td>
+			<tr>
+				<td>
+					<b>Number 1</b>
+					<br>
+					<input type="text" placeholder="Enter Number 1" name="n1" id="n1">
+					<br>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<label for="sign"><b>Sign</b></label>
+					<br>
+					<select id="sign" name="sign">
+                        <option value="">Select Sign</option>
+						<option value="1">+</option>
+						<option value="2">-</option>
+						<option value="3">x</option>
+						<option value="4">÷</option>
+                    </select>
+					<br>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<b>Number 2</b>
+					<br>
+					<input type="text" placeholder="Enter Number 2" name="n2" id="n2">
+					<br>
+				</td>
+			</tr>
+		</table>
+		<br>
+	<button onClick="calculate()">Calculate</button>
+	<br><br>
+	</center>
+	<style>
+		input[type=text], option,select {
+			width: 50%;
+			padding: 15px;
+			margin: 15px;
+			display: inline-block;
+			border: none;
+			background: #f1f1f1;
+			border-radius: 10px;
+		}
+
+		input[type=text]:focus {
+			background-color: #ddd;
+			outline: none;
+		}
+		button{
+			background-color: rgb(52, 52, 211);
+			border: none;
+			color: white;
+			padding: 15px 32px;
+			text-align: center;
+			text-decoration: none;
+			display: inline-block;
+			font-size: 16px;
+			border-radius: 15px;
+			text-align: center;
+		}
+		html { 
+			background: url(https://www.w3schools.com/howto/img_girl.jpg) no-repeat center center fixed; 
+			-webkit-background-size: cover;
+			-moz-background-size: cover;
+			-o-background-size: cover;
+			background-size: cover;
+		}
+		td{
+			width: 300px;
+		}
+		table{
+			background-color: rgb(110, 218, 137);
+			opacity: 0.90;
+			border-radius: 10px;
+			padding: 15px;
+		}
+        button:hover{
+            cursor: pointer;
+            background: rgb(0, 0, 0);
+            color: beige;
+            width: auto;
+        }
+	</style>
+	<script>
+		function calculate(){
+			var n1 = parseInt(document.getElementById("n1").value);
+            var n2 = parseInt(document.getElementById("n2").value);
+			var ans;
+			var sign = document.getElementById("sign");
+			var v = sign[sign.selectedIndex].value;
+			if (v =='1'){
+				ans=n1+n2;
+				alert("Answer is "+ans)
+			}
+			else if(v=='2'){
+				ans=n1-n2;
+				alert("Answer is "+ans)
+			}
+			else if(v=='3'){
+				ans=n1*n2;
+				alert("Answer is "+ans)
+			}
+			else if(v=='4'){
+				ans=n1/n2;
+				alert("Answer is "+ans)
+			}
+		}
+	</script>
+</body>
+</html>

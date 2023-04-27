@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Sign Up</title>
+	<link rel = "icon" href ="https://amrita.edu/wp-content/uploads/2019/05/amrita-new-favicon.ico" type = "image/x-icon">
+</head>
+
+<body style="font-size: 20px;">
+	<br><br>
+	<center><img src="1.png" height="168" width="613"></img>
+	<br><br>
+		<form action="SignUP2.html" method="GET" onsubmit="return checkPassword();">
+			<table>
+				<td>
+                    <center><div id="C1"><b style="font-size: 30px;">Registration</b><br><br></div></center>
+                </td>
+				<tr>
+					<td>
+						<label for="uname"><b>User Name</b></label>
+						<br>
+						<input type="text" placeholder="Enter User Name" name="uname" id="uname" required>
+						<br>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label for="email"><b>Email</b></label>
+						<br>
+						<input type="email" placeholder="Enter Email" name="email" id="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
+						<br>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label for="psw"><b>Password</b></label>
+						<br>
+						<input type="password" minlength="8" placeholder="Enter Password" name="psw" id="psw" required pattern="(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{7,15}$">
+						<br>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label for="pswc"><b>Confirm Password</b></label>
+						<br>
+						<input type="password" minlength="8" placeholder="Repeat Password" name="pswc" id="pswc" required pattern="(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{7,15}$">
+						<br>
+					</td>
+				</tr>
+		</table>
+		<br>
+			<button type="submit" name="submit" value="submit">Sign up</button>
+            <button type="reset">Reset</button>
+			<br><br>
+			<form action="Login.html" method="GET">
+				<button type="submit" name="login" value="login">Login</button>
+			</form>
+        <br><br>
+	</form>
+	</center>
+	<style>
+		input[type=text], input[type=password], input[type=tel], input[type=date],input[type=email],option,select {
+			width: 50%;
+			padding: 15px;
+			margin: 15px;
+			display: inline-block;
+			border: none;
+			background: #f1f1f1;
+			border-radius: 10px;
+		}
+
+		input[type=text]:focus, input[type=password]:focus, input[type=tel]:focus, input[type=date]:focus, input[type=email]:focus {
+			background-color: #ddd;
+			outline: none;
+		}
+		button[name='login']{
+			background-color: rgb(52, 52, 211);
+		}
+		button{
+			background-color: #df38d1;
+			border: none;
+			color: white;
+			padding: 15px 32px;
+			text-align: center;
+			text-decoration: none;
+			display: inline-block;
+			font-size: 16px;
+			border-radius: 15px;
+			text-align: center;
+		}
+		html { 
+			background: url(https://www.w3schools.com/howto/img_girl.jpg) no-repeat center center fixed; 
+			-webkit-background-size: cover;
+			-moz-background-size: cover;
+			-o-background-size: cover;
+			background-size: cover;
+		}
+		td{
+			width: 300px;
+		}
+		table{
+			background-color: rgb(110, 218, 137);
+			opacity: 0.90;
+			border-radius: 10px;
+			padding: 15px;
+		}
+	</style>
+	<script>
+		var email = document.getElementById("email");
+		email.addEventListener('input', () => {
+		email.setCustomValidity('');
+		email.checkValidity();
+		});
+		email.addEventListener('invalid', () => {
+		if(email.value === '') {
+			email.setCustomValidity('Enter Email');
+			alert("Please Enter Email");
+		} else {
+			email.setCustomValidity('Enter Email in this format: abc@example.com');
+		}
+		});
+		var uname = document.getElementById("uname");
+        uname.addEventListener('input', () => {
+        uname.setCustomValidity('');
+        uname.checkValidity();
+        });
+        uname.addEventListener('invalid', () => {
+        if(uname.value === '') {
+            uname.setCustomValidity('Enter User Name');
+            alert("Please Enter User Name");
+        }
+        });
+		var psw = document.getElementById("psw");
+        psw.addEventListener('input', () => {
+        psw.setCustomValidity('');
+        psw.checkValidity();
+        });
+        psw.addEventListener('invalid', () => {
+        if(psw.value === '') {
+            psw.setCustomValidity('Enter Password');
+            alert("Please Enter Password");
+        }
+        });
+		var pswc = document.getElementById("pswc");
+        pswc.addEventListener('input', () => {
+        pswc.setCustomValidity('');
+        pswc.checkValidity();
+        });
+        pswc.addEventListener('invalid', () => {
+        if(pswc.value === '') {
+            pswc.setCustomValidity('Enter Confirm Password');
+            alert("Please Enter Confirm Password");
+        }
+        });
+		function checkPassword() {
+			var p1=document.getElementById("psw").value
+			var p2=document.getElementById("pswc").value
+            if (p1 != p2) {
+                alert ("\nPassword did not match: Please try again...")
+                return false;
+            }
+            else{
+                alert("Continue with next step!!!");
+                return true;
+            }
+        }
+	</script>
+</body>
+
+</html>

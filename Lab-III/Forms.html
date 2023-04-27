@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Education Form</title>
+	<link rel = "icon" href ="https://www.umeacademy.com/wp-content/uploads/2021/03/AMRITA-VISHWA-VIDYAPEETHAM-college-logo.jpg" 
+        type = "image/x-icon">
+</head>
+
+<body style="font-size: 20px;">
+		<center><img src="https://upload.wikimedia.org/wikipedia/en/f/f8/Amrita-vishwa-vidyapeetham-color-logo.png"></img></center>
+		<form action="Forms.html" method="GET">
+            <center>
+            <table>
+                <tr >
+                    <td></td>
+                    <td>
+                        <div id="C1"><b style="font-size: 30px;"><br>Personal Details</b></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="name"><b>Name</b></label>
+                        <br>
+                        <input type="text" placeholder="Enter Name" name="name" id="name" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="address"><b>Address</b></label>
+                        <br>
+                        <input type="text" placeholder="Enter Address" name="address" id="address" style="width: 200%;" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="city"><b>City</b></label>
+                        <br>
+                        <input type="text" placeholder="Enter City" name="city" id="city" required>
+                    </td>
+                    <td>
+                        <label for="state"><b>State</b></label>
+                        <br>
+                        <input type="text" placeholder="Enter State" name="state" id="state" required>
+                    </td>
+                    <td>
+                        <label for="pincode"><b>PinCode</b></label>
+                        <br>
+                        <input type="text" placeholder="Enter PinCode" name="pincode" id="pincode" required pattern="[0-9]" maxlength="6" title="Not a valid PinCode" style="width: 45%;" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="phno"><b>Phone Number</b></label>
+                        <br>
+                        <input type="tel" placeholder="Enter Phone Number" name="phno" id="phno" required pattern="[0-9]" maxlength="10" title="Not a valid Phone Number">
+                    </td>
+                    <td>
+                        <label for="email"><b>Email</b></label>
+                        <br>
+                        <input type="text" placeholder="Enter Email" name="email" id="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                        title="Not a valid E-mail" required>
+                    </td>
+                    <td>
+                        <label for="dob"><b>Date of Brith</b></label>
+                        <br>
+                        <input type="date" name="dob" id="dob" style="width: 45%;" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="qulification"><b>Qulification</b></label>
+                        <br>
+                        <input list="qulification" placeholder="Select Qulification" name="qulification" required>
+                        <datalist id="qulification">
+                            <option value="Higher Certificate" />
+                            <option value="National Diploma" />
+                            <option value="Bachelor's Degree" />
+                            <option value="Honours Degree" />
+                            <option value="Master's Degree" />
+                            <option value="Doctoral Degree" />
+                        </datalist>
+                    </td>
+                    <td>
+                        <label for="doq"><b>Month and Year of Qulification</b></label>
+                        <br>
+                        <input type="month" name="doq" id="doq" style="width: 50%;" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="sq"><b>Skill and Qulification</b></label>
+                        <br>
+                        <input type="text" placeholder="Enter Skill and Qulification" name="sq" id="sq" style="width: 150%;" required>
+                    </td>
+                    <td></td>
+                    <td>
+                        <label for="grade"><b>Grade</b></label>
+                        <br>
+                        <input type="range" name="grade" id="grade" value="5.00" mim="0.00" max="10.00" step="0.01" oninput="this.nextElementSibling.value = this.value" required>
+                        <output>5</output>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><div id="C2"><b style="font-size: 30px;"><br>Employer History</b></div></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="q1"><b>Are you currently employed?</b></label>
+                        <br>
+                        <input type="radio" name="q1" id="q1"><label for="q1"><b>Yes</b></label>
+                        <input type="radio" name="q1" id="q1"><label for="q1"><b>No</b></label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="q2"><b>If you are currently employed, may we contact your current employer?</b></label>
+                        <br>
+                        <input type="radio" name="q2" id="q2"><label for="q2"><b>Yes</b></label>
+                        <input type="radio" name="q2" id="q2"><label for="q2"><b>No</b></label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="q3"><b>May we contact this employer for references?</b></label>
+                        <br>
+                        <input type="radio" name="q3" id="q3"><label for="q3"><b>Yes</b></label>
+                        <input type="radio" name="q3" id="q3"><label for="q3"><b>No</b></label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="ename"><b>Employer Name</b></label>
+                        <br>
+                        <input type="text" placeholder="Enter Employer Name" name="ename" id="ename" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="eaddress"><b>Address</b></label>
+                        <br>
+                        <input type="text" placeholder="Enter Address" name="eaddress" id="eaddress" style="width: 200%;" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="ecity"><b>City</b></label>
+                        <br>
+                        <input type="text" placeholder="Enter City" name="ecity" id="ecity" required>
+                    </td>
+                    <td>
+                        <label for="estate"><b>State</b></label>
+                        <br>
+                        <input type="text" placeholder="Enter State" name="estate" id="estate" required>
+                    </td>
+                    <td>
+                        <label for="epincode"><b>PinCode</b></label>
+                        <br>
+                        <input type="text" placeholder="Enter PinCode" name="epincode" id="epincode" required pattern="[0-9]" maxlength="6" title="Not a valid PinCode" style="width: 45%;" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="ephno"><b>Phone Number</b></label>
+                        <br>
+                        <input type="tel" placeholder="Enter Phone Number" name="ephno" id="ephno" required pattern="[0-9]" maxlength="10" title="Not a valid Phone Number">
+                    </td>
+                    <td>
+                        <label for="eemail"><b>Email</b></label>
+                        <br>
+                        <input type="text" placeholder="Enter Email" name="eemail" id="eemail" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                        title="Not a valid E-mail" required>
+                    </td>
+                    <td>
+                        <label for="salary"><b>Salary (₹)</b></label>
+                        <br>
+                        <input type="text" placeholder="Enter Salary in ₹" name="salary" id="salary" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="dof"><b>Employment Starting Date</b></label>
+                        <br>
+                        <input type="date" name="dof" id="dof" style="width: 45%;" required>
+                    </td>
+                    <td>
+                        <label for="doe"><b>Employment Ending Date</b></label>
+                        <br>
+                        <input type="date" name="doe" id="doe" style="width:45%;" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="q4"><b>Have you ever applied to / worked for [Our Company] before?</b></label>
+                        <br>
+                        <input type="radio" name="q4" id="q4"><label for="q4"><b>Yes</b></label>
+                        <input type="radio" name="q4" id="q4"><label for="q4"><b>No</b></label>
+                    </td>
+                    <td>
+                        <label for="q5"><b>Do you have any friends, relatives, or acquaintances working for [Our Company]? </b></label>
+                        <br>
+                        <input type="radio" name="q5" id="q5"><label for="q5"><b>Yes</b></label>
+                        <input type="radio" name="q5" id="q5"><label for="q5"><b>No</b></label>
+                    </td>
+                    <td>
+                        <label for="q6"><b>If hired, would you have transportation to/from work?<br></b></label>
+                        <br>
+                        <input type="radio" name="q6" id="q6"><label for="q6"><b>Yes</b></label>
+                        <input type="radio" name="q6" id="q6"><label for="q6"><b>No</b></label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="q7"><b>Are you over the age of 18?<br></b></label>
+                        <br>
+                        <input type="radio" name="q7" id="q7"><label for="q7"><b>Yes</b></label>
+                        <input type="radio" name="q7" id="q7"><label for="q7"><b>No</b></label>
+                    </td>
+                    <td>
+                        <label for="q8"><b>If you are under the age of 18, do you have an employment/age certificate?</b></label>
+                        <br>
+                        <input type="radio" name="q8" id="q8"><label for="q8"><b>Yes</b></label>
+                        <input type="radio" name="q8" id="q8"><label for="q8"><b>No</b></label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <b style="font-size: 30px;"><br>Are you Applying for:<br><br></b>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="q9"><b>Temporary work – such as<br>summer or holiday work?</b></label>
+                        <br>
+                        <input type="radio" name="q9" id="q9"><label for="q9"><b>Yes</b></label>
+                        <input type="radio" name="q9" id="q9"><label for="q9"><b>No</b></label>
+                    </td>
+                    <td>
+                        <label for="q10"><b>Regular part-time work?<br></b></label>
+                        <br>
+                        <input type="radio" name="q10" id="q10"><label for="q10"><b>Yes</b></label>
+                        <input type="radio" name="q10" id="q10"><label for="q10"><b>No</b></label>
+                    </td>
+                    <td>
+                        <label for="q11"><b>Regular full-time work?<br></b></label>
+                        <br>
+                        <input type="radio" name="q11" id="q11"><label for="q11"><b>Yes</b></label>
+                        <input type="radio" name="q11" id="q11"><label for="q11"><b>No</b></label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="q12"><b><br>If applying for temporary work, indicate your desired length of employment below :<br><br></b></label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="sd"><b>Starting Date</b></label>
+                        <br>
+                        <input type="date" name="sd" id="sd" style="width: 45%;" required>
+                    </td>
+                    <td>
+                        <label for="doe"><b>Ending Date</b></label>
+                        <br>
+                        <input type="date" name="sd" id="sd" style="width: 45%;" required>
+                    </td>
+                    <td>
+                        <label for="q11"><b>Do you speak, write or understand any foreign languages?</b></label>
+                        <br>
+                        <input type="radio" name="q12" id="q12"><label for="q12"><b>Yes</b></label>
+                        <input type="radio" name="q12" id="q12"><label for="q12"><b>No</b></label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <a href="#C1">Personal Details</a><br><a href="#C2">Employment History</a>
+                    </td>
+                    <td>
+                        <b>Click on the Link to Confirm Verify</b>
+                    </td>
+                </tr>
+            </table>
+                <button type="submit" name="submit" value="submit">Submit</button>
+                <button type="reset">Reset</button>
+            </center>
+		</form>
+        <b></b>
+		<style>
+            input[type=radio]{
+                margin: 10px;
+            }
+            input[type=range]{
+                margin: 15px;
+                width: 65%;
+            }
+			input[type=text], input[type=password], input[type=tel], input[type=date],input[list=qulification], input[type=month] {
+				width: 50%;
+				padding: 15px;
+				margin: 15px;
+				display: inline-block;
+				border: none;
+				background: #f1f1f1;
+				border-radius: 10px;
+			}
+  
+			input[type=text]:focus, input[type=password]:focus, input[type=tel]:focus, input[type=date]:focus, input[list=qulification]:focus, input[type=month]:focus {
+				background-color: #ddd;
+				outline: none;
+			}
+			button{
+				background-color: #df38d1;
+				border: none;
+				color: white;
+				padding: 15px 32px;
+				text-align: center;
+				text-decoration: none;
+				display: inline-block;
+				font-size: 16px;
+				border-radius: 15px;
+				text-align: center;
+			}
+            td{
+                width: 300px;
+            }
+            html { 
+                background: url(https://www.w3schools.com/howto/img_girl.jpg) no-repeat center center fixed; 
+                -webkit-background-size: cover;
+                -moz-background-size: cover;
+                -o-background-size: cover;
+                background-size: cover;
+            }
+            table{
+                background-color: rgb(110, 218, 137);;
+                opacity: 0.90;
+                border-radius: 10px;
+            }
+		</style>
+</body>
+
+</html>
